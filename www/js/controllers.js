@@ -8,7 +8,7 @@ angular.module('app.controllers', [])
 	  method: 'GET',
 	  url: serverPath + '/getConf?'+'email=' + hostid
 	}).then(function successCallback(response) {
-		console.log(response.data);
+		console.log(response);
 	    $scope.booked = response.data;
 	  }, function errorCallback(response) {
 	    console.log("Couldn't get cards for homepage " + response);
@@ -59,24 +59,29 @@ angular.module('app.controllers', [])
 })
  
 .controller('acPageCtrl', function($scope) {
+	$scope.acControl = function() {
+		console.log("AC control to be developed yet");
+	}
 
 })
 
-.controller('unlockPageCtrl', function($scope, $http) {
-	$scope.topicMsg = $rootScope.unlockDetail;
+.controller('unlockPageCtrl', function($rootScope, $scope, $http) {
+	var topicMsg = $rootScope.unlockDetail;
+	console.log("Topic and message " + topicMsg);
 	var unlocked = false;
 	// unlock ? true(1, yes) and false(0, lock, no)
-	$scope.unlock = function() {
+	$scope.unlockControl = function() {
 		if(unlocked == false) {
 			unlocked = true;
 			var req = {
 				method: 'POST',
 				url: serverPath + '/unlock',
 				data: {
-					topic: $scope.topicMsg[0],
-					message: $scope.topicMsg[1]
+					topic: topicMsg[0],
+					message: topicMsg[1]
 				}
-			}
+			};
+			console.log("Unlock request " + req);
 			$http(req).then(function(response) {
 				console.log(response);
 			})
