@@ -1,0 +1,14 @@
+<ion-view title="Search Results">
+    <ion-content padding="true" class="has-header">
+        <div class="card" ng-repeat="result in results">
+            <a href="#/bookingPage" ng-click="selectTile($index)">
+            <div class="item item-text-wrap itemCard list card">
+                <div class="dateConf">{{result.date | date}}</div>
+                <div class="timeConf"><br>{{result.startTime}} - {{result.endTime}}</div>
+                <div class="confRoom">{{result.room_id}}</div>
+                <div class="confAddr">{{result.address}}</div>
+            </div>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

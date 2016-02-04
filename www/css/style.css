@@ -1,0 +1,78 @@
+a {
+	text-decoration: none;
+}
+
+.bar .title.title-left {
+	text-align: center;
+}
+
+body {
+	height: 100vh;
+}
+
+.card {
+	text-decoration: none;
+}
+
+.cancel {
+	float: right;
+}
+
+.confRoom {
+	padding: 3vw 0;
+	font-size: 6vw;
+	text-decoration: none;
+}
+
+.confAddr {
+	color: #aaa;
+	text-decoration: none;
+}
+
+.container {
+	height: 88vh;
+}
+
+.dateConf {
+	font-size: 3.5vw;
+	display: inline-block;
+	float: right;
+	text-decoration: none;
+}
+
+.dateFilter {
+	padding: 2vw 0;
+	width: 40%;
+}
+
+.find {
+	float: right;
+}
+
+h6 {
+	text-align: center;
+}
+
+.status {
+	font-size: 3vw;
+	color: green;
+	display: inline-block;
+	float: left;
+	text-transform: uppercase;
+}
+
+.status-bar-indicator {
+	display: none;
+}
+
+.timeConf {
+    font-size: 3.5vw;
+    padding: 0;
+    color: #aaaaaa;
+    text-decoration: none;
+}
+
+.timeFilter {
+	padding: 3vw 0;
+	width: 40%;
+}

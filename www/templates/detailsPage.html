@@ -1,0 +1,22 @@
+<ion-view title="Details Page">
+    <ion-content padding="true" class="has-header">
+    	<h2>{{detail.room_id}}</h2>
+        <div>
+            <p>{{detail.address}}</p>
+        </div>
+        <div>
+            <p>{{detail.date | date}}</p>
+        </div>
+        <div>
+            <p>{{detail.startTime}} - {{detail.endTime}}</p>
+        </div>
+        <div>
+            <div class="meeting">{{detail.meeting.title}}</div>
+            <div class="description">{{detail.meeting.description}}</div>
+            <p>Attendees: {{detail.meeting.attendees}}</p>
+        </div>
+        <a href="#/unlockPage" class="button  button-icon  icon-left ion-android-unlock col" ng-click="unlock()">Unlock Door</a>
+        <a href="#/acPage" class="button button-stable button-icon  icon-left ion-ios-partlysunny-outline col" ng-click="ac()">AC</a>
+        <a href="#/homepage" class="button button-assertive button-block cancel" ng-click="cancel()">Cancel</a>
+    </ion-content>
+</ion-view>

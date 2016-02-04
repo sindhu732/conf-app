@@ -1,0 +1,44 @@
+<ion-view title="Search Page">
+    <ion-content padding="true" class="has-header">
+    	<form class="list">
+            <h4>Book Conference Rooms</h4>
+            <div>
+                <p>Apply Filters below</p>
+            </div>
+            <label class="item item-input" name="dateConf">
+                <span class="input-label">Date</span>
+                <input type="date" class="dateFilter" ng-model="date" placeholder="DD/MM/YYYY">
+            </label>
+            <!-- <label class="item item-input" name="timeConf">
+                <span class="input-label">Start Time</span>
+                <input type="time" ng-model="startTime" class="timeFilter">
+            </label> -->
+            <label class="item item-input">
+                <span class="input-label">
+                    Start Time
+                </span>
+                <input restrict-input="^[0-9]" maxlength="8" ng-model="startTime" placeholder="HHMM (24 hour)">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">
+                    End Time
+                </span>
+                <input restrict-input="^[0-9]" maxlength="8" ng-model="endTime" placeholder="HHMM (24 hour)">
+            </label>
+            <!-- <label class="item item-input" name="timeConf">
+                <span class="input-label">End Time</span>
+                <input type="time" ng-model="endTime" class="timeFilter">
+            </label> -->
+            <!-- <label class="item item-input" name="numAttendees">
+                <span class="input-label">Number of Attendees</span>
+                <input type="number" ng-model="" placeholder="Enter here">
+            </label>
+            <ion-checkbox ng-model="speakerPodium">Speaker Podium</ion-checkbox>
+            <ion-checkbox ng-model="projector">Projector</ion-checkbox>
+            <ion-checkbox ng-model="phone">Phone</ion-checkbox>
+            <ion-checkbox ng-model="microphone">Microphone</ion-checkbox> -->
+            <!-- <a href="#" onclick="window.open('http://localhost:1880/findConf', '_system', 'location=yes'); return false;" class="button button-stable button-block ">Find Conference Rooms</a> -->
+            <a href='#/resultsPage' ng-click="findConf(date, startTime, endTime)" class="button button-stable button-block ">Find Conference Rooms</a>
+        </form>
+    </ion-content>
+</ion-view>

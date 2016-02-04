@@ -1,0 +1,21 @@
+<a href="#/searchPage">
+<button id="fab" class="button button-positive button-fab button-fab-bottom-right icon ion-android-add"></button>
+</a>
+<ion-view title="Home Page">
+    <ion-content padding="true" class="has-header">
+    	<div class="container">
+    	<div class="card" ng-repeat="room in booked">
+    		<a href="#/detailsPage" ng-click="selectTile($index)">
+    		<div class="item item-text-wrap itemCard">
+	            <!-- <div class="status">{{room.status}}</div> --> <div class="dateConf">{{room.date | date}}</div>
+	            <div class="timeConf"><br>{{room.startTime}} - {{room.endTime}}</div>
+                <div class="meeting">{{room.meeting.title}}</div>
+                <div class="description">{{room.meeting.description}}</div>
+	            <div class="confRoom">{{room.room_id}}</div>
+	            <div class="confAddr">{{room.address}}</div>
+	        </div>
+        	</a>            
+        </div>
+        </div>
+    </ion-content>
+</ion-view>
